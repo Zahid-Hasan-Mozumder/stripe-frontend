@@ -26,7 +26,7 @@ function CheckoutProSubscription() {
         );
         console.log(response.data);
 
-        if(response.data.status == "active") window.location.href = "http://localhost:5173/checkout/success";
+        if(response.data.status == "active") window.location.href = `http://localhost:5173/checkout/success?type=${'pro'}&customerId=${response.data.customer}&subscriptionId=${response.data.id}`;
     }
 
     return (
